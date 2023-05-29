@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 if (networkinfo != null && networkinfo.isConnected()) {
 
                     String latitude = binding.textViewLatitude.getText().toString().split(" ")[1];
-                    String longitude = binding.textViewLatitude.getText().toString().split(" ")[1];
+                    String longitude = binding.textViewLongitude.getText().toString().split(" ")[1];
                     new DownloadWeatherTask().execute("https://api.open-meteo.com/v1/forecast?latitude="+latitude+"&longitude="+longitude+"&current_weather=true"); // запуск нового потока
 
                 } else {
